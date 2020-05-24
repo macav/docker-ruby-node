@@ -4,7 +4,7 @@ LABEL maintainer "Martin Cavoj <martincavoj@gmail.com>"
 ENV LANG C
 ENV LC_ALL C.UTF-8
 
-RUN apt-get update -qqy && apt-get -qqyy install curl wget
+RUN apt-get update -qqy && apt-get -qqyy install curl wget git
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
   && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
   && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
